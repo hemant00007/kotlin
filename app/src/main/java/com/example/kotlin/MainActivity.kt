@@ -9,16 +9,9 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity(){
-    override fun onCreate(abc:Bundle?){
+    override fun onCreate(abc:Bundle?) {
         super.onCreate(abc)
         setContentView(R.layout.activity_main)
-     val edttext = findViewById<EditText>(R.id.ed)
-        val button = findViewById<Button>(R.id.submit)
-
-        button.setOnClickListener(){
-            val mystring = edttext.text.toString()
-            val mytoast = Toast.makeText(applicationContext,edttext.text,Toast.LENGTH_SHORT).show()
-        }
     }
 }
 
