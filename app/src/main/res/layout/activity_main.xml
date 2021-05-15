@@ -5,13 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+      android:background="@color/purple_500"/>
 
-    <Button
-        android:id="@+id/alert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="alert dialog"
-        android:layout_centerInParent="true"/>
+   <ListView
+       android:id="@+id/listview"
+       android:layout_below="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
 
 
 </RelativeLayout>
