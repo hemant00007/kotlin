@@ -5,21 +5,26 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 
 class MainActivity : AppCompatActivity(){
+
     override fun onCreate(abc:Bundle?) {
         super.onCreate(abc)
         setContentView(R.layout.activity_main)
-        val btn = findViewById<Button>(R.id.btn)
-        btn.setOnClickListener(){
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.setData(Uri.parse("https://google.com"))
-            startActivity(intent)
+        val arraydata = arrayOf("hemant","Lucky","vikash","amit","hemant","Lucky","vikash","amit","hemant","Lucky","vikash","amit")
+       val country_array:Array<String> = resources.getStringArray(R.array.country)
+        val arrayAdapter= ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arraydata)
+
+
+       val listView = findViewById<ListView>(R.id.listView)
+
+        listView.adapter=arrayAdapter
+        listView.setOnItemClickListener { parent, view, position, id ->
+            Toast.makeText(this,arraydata[position],Toast.LENGTH_SHORT).show()
         }
+
+
     }
 }
 
