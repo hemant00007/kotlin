@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity(){
 
         button.setOnClickListener(){
             val mystring = edttext.text.toString()
-            Toast.makeText(applicationContext,mystring,Toast.LENGTH_SHORT).show()
+            val mytoast = Toast.makeText(applicationContext,edttext.text,Toast.LENGTH_SHORT).show()
         }
     }
 }
