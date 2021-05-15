@@ -1,6 +1,7 @@
 package com.example.kotlin
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
@@ -15,7 +16,8 @@ class MainActivity : AppCompatActivity(){
         setContentView(R.layout.activity_main)
         val btn = findViewById<Button>(R.id.btn)
         btn.setOnClickListener(){
-            val intent = Intent(this,MainActivity2::class.java)
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://google.com"))
             startActivity(intent)
         }
     }
